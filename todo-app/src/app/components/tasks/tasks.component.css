@@ -1,0 +1,45 @@
+.container-grid {
+  width: 80%;
+  height: 90vh;
+  margin: auto;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+}
+
+mat-grid-list {
+  margin: 0 15px;
+}
+mat-grid-tile {
+  background: lightblue;
+  border: 3px solid black;
+  box-sizing: border-box;
+  display: flex;
+}
+
+mat-grid-tile:hover{
+    transform: scale(0.95);
+    transition: ease-in;
+    cursor: pointer;
+}
+
+.my-card{
+    min-height: 100% !important;
+    width: 90%;
+}
+
+
+.incident{
+    bottom: 5%;
+    position: absolute;
+}
+
+.status{
+  bottom: 5%;
+  right: 5%;
+    position: absolute;
+}

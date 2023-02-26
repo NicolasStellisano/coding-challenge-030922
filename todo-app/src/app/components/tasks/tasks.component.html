@@ -1,0 +1,20 @@
+<section class="container-grid">
+    <mat-grid-list cols="3" gutterSize="15px" rowHeight="40vh">
+        <mat-grid-tile *ngFor="let task of tasks" (click)="openTask(task.id)">
+            <mat-card class="my-card">
+                <mat-card-header>
+                  <mat-card-subtitle>{{task.project}}</mat-card-subtitle>
+                  <mat-card-title>{{task.title}} | ({{this.millisToMinutesAndSeconds(task.timeSpent)}})</mat-card-title>
+                </mat-card-header>
+                <mat-divider></mat-divider>
+                <mat-card-content>
+                  <p>{{ task.description }}</p>
+                </mat-card-content>
+                <h3 class="incident">{{task.id}}</h3>
+                <h3 class="status">Status: {{task.status}}</h3>
+
+              </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list> 
+</section>
+

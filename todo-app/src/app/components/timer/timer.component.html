@@ -1,0 +1,5 @@
+<div class="container-timer">
+<button *ngIf="task.status != 'Done'" (click)="play()" class="boton"></button>
+<div *ngIf="task.status != 'Done'" class="timer hidden pause"></div>
+<h3>Time Spent: {{showTime}}</h3>
+</div>

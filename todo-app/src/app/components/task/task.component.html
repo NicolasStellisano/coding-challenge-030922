@@ -1,0 +1,24 @@
+<section class="container">
+<button (click)="back()" style="background-color: black;color: lightblue;width: 150px;">Volver</button>
+
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-subtitle>{{ task.project }}</mat-card-subtitle>
+      <mat-card-title>{{ task.title }}</mat-card-title>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <p>{{ task.description }}</p>
+    </mat-card-content>
+  </mat-card>
+
+  
+  <app-timer [task]="task"></app-timer>
+  <h3 class="incident">{{ task.id }}</h3>
+
+  <div *ngIf="task.status != 'Done'" class="example-button-container">
+    <button (click)="done()" style="border-radius: 50%;border: black solid 2px; background-color: lightgreen;transform: scale(1.4);">
+      <mat-icon>check</mat-icon>
+    </button>
+  </div>
+</section>

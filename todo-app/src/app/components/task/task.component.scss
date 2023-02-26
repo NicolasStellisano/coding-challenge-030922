@@ -1,0 +1,31 @@
+.container {
+  width: 60vw;
+  min-height: 50vh;
+  margin: auto;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  background: lightblue;
+  border: 3px solid black;
+  box-sizing: border-box;
+  justify-content: flex-start;
+}
+
+.incident {
+  margin-left: 3vw;
+}
+
+.card {
+  margin-top: 3vh;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  justify-content: flex-end;
+  padding: 15px;
+}

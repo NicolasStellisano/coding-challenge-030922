@@ -1,0 +1,68 @@
+.container-timer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@property --percentage {
+  initial-value: 0%;
+  inherits: false;
+  syntax: "<percentage>";
+}
+
+.timer {
+  background: conic-gradient(#0088cc var(--percentage), rgba(255, 255, 255, 0) 0);
+  border-radius: 50%;
+  border: solid 10px #00517a;
+  width: 100px;
+  height: 100px;
+  animation: timer 1800s linear forwards;
+  animation-play-state: running;
+  display: block;
+  &.pause{
+    animation-play-state: paused;
+  }
+  &.hidden{
+    display: none;
+  }
+}
+
+
+
+@keyframes timer {
+  to {
+    --percentage: 100%;
+  }
+}
+
+
+.boton {
+  margin-left: 1vw;
+
+  border: 0;
+  background: transparent;
+  box-sizing: border-box;
+  width: 0;
+  height: 74px;
+  cursor: pointer;
+  padding: 0;
+
+  border-color: transparent transparent transparent #202020;
+  transition: 100ms all ease;
+
+  // play state
+  border-style: solid;
+  border-width: 37px 0 37px 60px;
+
+  &.pause {
+    border-style: double;
+    border-width: 0px 0 0px 60px;
+  }
+
+  &:hover {
+    border-color: transparent transparent transparent #404040;
+  }
+  &.hidden{
+    display: none;
+  }
+}
